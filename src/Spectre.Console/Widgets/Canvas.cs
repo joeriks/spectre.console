@@ -61,6 +61,17 @@ namespace Spectre.Console
             _pixels[x, y] = color;
         }
 
+        /// <summary>
+        /// Gets the color of the pixel in the canvas at the specified location.
+        /// </summary>
+        /// <param name="x">The X coordinate for the pixel.</param>
+        /// <param name="y">The Y coordinate for the pixel.</param>
+        /// <returns>The color or null if the pixel is not set.</returns>
+        public Color? GetPixel(int x, int y)
+        {
+            return _pixels[x, y];
+        }
+
         /// <inheritdoc/>
         protected override Measurement Measure(RenderContext context, int maxWidth)
         {
